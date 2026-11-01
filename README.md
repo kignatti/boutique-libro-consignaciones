@@ -15,9 +15,8 @@
 ---
 
 ## 🔗 Accesos Directos del Proyecto
-* **Tablero Interactivo de Gestión (GitHub Projects):** [Enlace a tu Tablero Kanban](https://github.com)
-* **Repositorio Público de GitHub:** [Enlace a este Repositorio](https://github.com)
-
+* **Tablero Interactivo de Gestión (GitHub Projects):** https://github.com/kignatti/boutique-libro-consignaciones/projects
+* **Repositorio Público de GitHub:** https://github.com/kignatti/tpi-oe-kevin-ignatti
 ---
 
 ## 📄 Descripción del Sistema
