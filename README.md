@@ -47,8 +47,65 @@ El proyecto implementa una política estricta de aislamiento de funciones para p
 * `feature/control-excepciones`: Codificación defensiva, control de datos alfanuméricos (`try/except`) y reglas de negocio en caja (`raise ValueError`).
 
 ---
+Mecanismos de Control e Indicadores de Desempeño
 
-## 🤖 Declaración de Uso Crítico y Transparencia de IA
-Para la elaboración de la base documental y la optimización sintáctica de este proyecto, se utilizó la asistencia técnica de Inteligencia Artificial Generativa bajo criterios profesionales de transparencia. 
+Para garantizar el correcto funcionamiento del sistema de gestión de consignaciones de La Boutique del Libro, se establecen diferentes mecanismos de control que permiten evaluar el desempeño de sus principales operaciones.
 
-**Supervisión Humana y Edición Crítica:** El equipo técnico llevó a cabo una auditoría rigurosa sobre los resultados del modelo de lenguaje. Se rechazaron de forma manual las lógicas de reintento infinito sugeridas por la IA para el módulo de caja, debido a que violaban las restricciones operativas de la cátedra. Asimismo, se corrigió de forma manual la dirección de las excepciones del software, forzando a que los errores de negocio de las funciones operativas se propaguen limpiamente hacia la función contenedora `main()`, asegurando así el cumplimiento conceptual estricto de la rúbrica y preservando la autoría intelectual del estudiante.
+Los indicadores propuestos son los siguientes:
+
+1. Registro de consignaciones
+
+Indicador: porcentaje de libros recibidos que fueron registrados correctamente.
+
+Estándar: el 100 % de los libros recibidos debe quedar registrado con sus datos correspondientes.
+
+2. Actualización del inventario
+
+Indicador: correspondencia entre las ventas realizadas y las modificaciones del stock.
+
+Estándar: cada venta debe reflejarse correctamente en el inventario.
+
+3. Registro de ventas
+
+Indicador: porcentaje de operaciones de venta registradas.
+
+Estándar: el 100 % de las ventas realizadas debe quedar registrado en el sistema.
+
+4. Exactitud de liquidaciones
+
+Indicador: coincidencia entre los importes calculados y las cantidades vendidas a cada proveedor.
+
+Estándar: las liquidaciones deben reflejar correctamente los acuerdos establecidos con cada proveedor.
+
+5. Trazabilidad de operaciones
+
+Indicador: posibilidad de consultar e identificar las operaciones realizadas.
+
+Estándar: cada operación debe contar con información suficiente para permitir su seguimiento y verificación.
+
+Estos indicadores permiten establecer parámetros de evaluación y detectar posibles errores o desviaciones en los procesos, facilitando la aplicación de medidas correctivas y la mejora continua del sistema.
+Declaración de Uso de Inteligencia Artificial (IA)
+
+Durante el desarrollo del proyecto se utilizaron herramientas de Inteligencia Artificial Generativa, principalmente ChatGPT, como recurso de apoyo para organizar la documentación, estructurar los procesos del sistema y mejorar la presentación de los contenidos técnicos.
+
+Los prompts utilizados estuvieron orientados principalmente a:
+
+Organización y documentación: solicitar asistencia para estructurar las distintas secciones del proyecto y mejorar la claridad de las descripciones.
+
+Modelado de procesos: consultar sobre la representación de los procesos organizacionales mediante la notación BPMN.
+
+Gestión del proyecto: recibir orientación para organizar las historias de usuario y las actividades mediante GitHub Projects.
+
+Revisión conceptual: solicitar explicaciones y sugerencias para verificar la coherencia entre los procesos de negocio y las funcionalidades del sistema.
+
+Correcciones y validación humana
+
+Los resultados proporcionados por las herramientas de IA fueron utilizados como propuestas iniciales y no se incorporaron de manera automática.
+
+Se realizó una revisión humana de los contenidos para verificar que fueran coherentes con las características reales de La Boutique del Libro y con los objetivos del proyecto.
+
+Entre las tareas de revisión se contemplaron la adaptación de las respuestas al contexto de la organización, la corrección de posibles imprecisiones conceptuales y la validación de los procesos y funcionalidades propuestos.
+
+La responsabilidad final sobre las decisiones de diseño, la documentación y la coherencia del sistema corresponde a los integrantes del proyecto.
+
+En conclusión, la Inteligencia Artificial fue utilizada como una herramienta complementaria de asistencia, manteniendo el criterio propio y la responsabilidad humana sobre el trabajo realizado
