@@ -7,7 +7,7 @@
 * **Institución:** Universidad Tecnológica Nacional (UTN)
 * **Carrera:** Tecnicatura Universitaria en Programación a Distancia (TUP AD)
 * **Asignatura:** Organización Empresarial
-* **Entrega:** Entrega Nº 4 — Procesos, Trabajo Colaborativo y Control Integrador
+* **Trabajo Práctico Integrador (TPI) — Progresivo**
 * **Alumno:** Kevin Ignatti
 * **Docente Titular:** Prof. Gabriela Martínez
 * **Docentes Adjuntos/Tutores:** Prof. Carolina Bruno, Prof. Mario Raúl López, Prof. Andrea Ramos, Prof. Gilda Jaquelina Domínguez
@@ -15,96 +15,49 @@
 ---
 
 ## 🔗 Accesos Directos del Proyecto
-* **Tablero Interactivo de Gestión (GitHub Projects):** https://github.com/kignatti/boutique-libro-consignaciones/projects
-* **Repositorio Público de GitHub:** https://github.com/kignatti/tpi-oe-kevin-ignatti
----
-
-## 📄 Descripción del Sistema
-Este software ha sido diseñado y desarrollado para transformar y automatizar el flujo operativo y financiero de **La Boutique del Libro (Sucursal Trelew)**. El sistema reemplaza de forma definitiva el antiguo control analógico mediante planillas de papel por un procesamiento digitalizado en tiempo real. 
-
-El foco principal de la aplicación consiste en trazar con precisión matemática el ciclo de vida de las obras literarias recibidas bajo la modalidad de **consignación** (títulos cedidos por editoriales independientes y autores locales), automatizando las alertas de stock crítico en mostrador y optimizando las liquidaciones comerciales al cierre de cada período con un 0% de margen de error de cálculo.
+* **Tablero Interactivo de Gestión (GitHub Projects):** [Ver Tablero](https://github.com/kignatti/boutique-libro-consignaciones/projects)
+* **Repositorio Público de GitHub:** [Ver Repositorio](https://github.com/kignatti/tpi-oe-kevin-ignatti)
 
 ---
 
-## 📂 Estructura del Repositorio
-Para garantizar la máxima legibilidad y navegabilidad por parte de la cátedra, los artefactos del proyecto se encuentran ordenados bajo la siguiente estructura modular:
+## 📖 Descripción General del Proyecto
+Este repositorio contiene el desarrollo del **Trabajo Práctico Integrador** de la materia Organización Empresarial. El proyecto se estructuró de manera progresiva a lo largo de tres entregas fundamentales:
+1. **Modelado como Sistema Abierto (TGS):** Análisis de *La Boutique del Libro* (sucursal Trelew) como un sistema abierto, identificando entradas, procesos de transformación (curaduría, venta especializada y eventos culturales), salidas y su interacción con el entorno.
+2. **Diagnóstico y Planeación Tecnológica:** Elaboración de matriz FODA, establecimiento de metas cuantitativas e implementación de un cronograma de trabajo (Diagrama de Gantt) a 6 meses.
+3. **Estructura Formal y Diseño de Datos:** Modelado de la estructura organizacional de la sucursal (organigrama vertical) y diseño inicial del Diccionario de Datos relacional para el control de consignaciones.
 
-* `README.md` → Portada oficial, descripción técnica del sistema e integrantes.
-* `docs/01-bpmn/` → Modelado de procesos organizacionales en notación estándar BPMN 2.0 y guía de lectura.
-* `docs/02-backlog/` → Tabulación formal de las tres Historias de Usuario y criterios de aceptación.
-* `docs/03-control/` → Indicadores de control de gestión y estándares de desempeño.
-* `docs/04-ia/` → Declaración ampliada de uso crítico de Inteligencia Artificial Generativa.
-* `src/` → Código fuente ejecutable de la aplicación en Python (`.py`).
+---
+
+## 🗂️ Arquitectura y Estructura de Datos (Entrega 3)
+El módulo propuesto automatiza el ciclo de vida de los libros en consignación (editoriales independientes y autores locales). Las **5 entidades críticas** modeladas en el sistema son:
+
+* **Proveedor:** Almacena datos de las editoriales y autores (ID, nombre, contacto, porcentaje de comisión acordado).
+* **Consignación:** Registra el ingreso inicial de ejemplares y controla el stock disponible en tiempo real.
+* **Venta de Consignación:** Registra cada transacción vinculada para descontar el inventario de forma automática.
+* **Liquidación:** Automatiza el cálculo periódico de los importes a pagar a cada proveedor según las ventas y comisiones retenidas.
+* **Reposición:** Gestiona las solicitudes automáticas de stock ante unidades agotadas.
 
 ---
 
 ## 🌿 Estrategia de Versionado (Gitflow Adaptado)
 El proyecto implementa una política estricta de aislamiento de funciones para proteger la integridad de la rama de producción:
 * `main`: Línea base estable y entregable. Solo recibe integraciones revisadas mediante Pull Requests aprobados.
-* `feature/bpmn-consignacion`: Bifurcación secundaria utilizada para el modelado de datos y diccionarios iniciales.
-* `feature/backlog-historias`: Desarrollo de los requerimientos y trazabilidad ágil.
-* `feature/control-excepciones`: Codificación defensiva, control de datos alfanuméricos (`try/except`) y reglas de negocio en caja (`raise ValueError`).
+* `feature/bpmn-consignacion`: Modelado de procesos y diccionarios iniciales.
+* `feature/backlog-historias`: Desarrollo de requerimientos y trazabilidad ágil.
+* `feature/control-excepciones`: Codificación defensiva, validación de datos alfanuméricos y control de excepciones.
 
 ---
-Mecanismos de Control e Indicadores de Desempeño
 
-Para garantizar el correcto funcionamiento del sistema de gestión de consignaciones de La Boutique del Libro, se establecen diferentes mecanismos de control que permiten evaluar el desempeño de sus principales operaciones.
+## 📊 Mecanismos de Control e Indicadores de Desempeño
+Para evaluar el éxito operacional del sistema, se definieron los siguientes indicadores:
+1. **Registro de Consignaciones:** 100% de los libros recibidos registrados correctamente con sus datos.
+2. **Actualización de Inventario:** Coincidencia estricta entre las ventas en caja y la baja automática de stock.
+3. **Exactitud de Liquidaciones:** Margen de error del 0% en el cálculo de importes y comisiones a proveedores.
+4. **Trazabilidad:** Disponibilidad de información histórica para auditar cualquier operación del sistema.
 
-Los indicadores propuestos son los siguientes:
+---
 
-1. Registro de consignaciones
+## 🤖 Declaración de Uso de Inteligencia Artificial (IA)
+Durante el desarrollo del proyecto se utilizaron herramientas de Inteligencia Artificial Generativa (principalmente ChatGPT) como recurso de apoyo para la estructuración de la documentación, la redacción formal, la organización de historias de usuario y la maquetación visual de diagramas.
 
-Indicador: porcentaje de libros recibidos que fueron registrados correctamente.
-
-Estándar: el 100 % de los libros recibidos debe quedar registrado con sus datos correspondientes.
-
-2. Actualización del inventario
-
-Indicador: correspondencia entre las ventas realizadas y las modificaciones del stock.
-
-Estándar: cada venta debe reflejarse correctamente en el inventario.
-
-3. Registro de ventas
-
-Indicador: porcentaje de operaciones de venta registradas.
-
-Estándar: el 100 % de las ventas realizadas debe quedar registrado en el sistema.
-
-4. Exactitud de liquidaciones
-
-Indicador: coincidencia entre los importes calculados y las cantidades vendidas a cada proveedor.
-
-Estándar: las liquidaciones deben reflejar correctamente los acuerdos establecidos con cada proveedor.
-
-5. Trazabilidad de operaciones
-
-Indicador: posibilidad de consultar e identificar las operaciones realizadas.
-
-Estándar: cada operación debe contar con información suficiente para permitir su seguimiento y verificación.
-
-Estos indicadores permiten establecer parámetros de evaluación y detectar posibles errores o desviaciones en los procesos, facilitando la aplicación de medidas correctivas y la mejora continua del sistema.
-Declaración de Uso de Inteligencia Artificial (IA)
-
-Durante el desarrollo del proyecto se utilizaron herramientas de Inteligencia Artificial Generativa, principalmente ChatGPT, como recurso de apoyo para organizar la documentación, estructurar los procesos del sistema y mejorar la presentación de los contenidos técnicos.
-
-Los prompts utilizados estuvieron orientados principalmente a:
-
-Organización y documentación: solicitar asistencia para estructurar las distintas secciones del proyecto y mejorar la claridad de las descripciones.
-
-Modelado de procesos: consultar sobre la representación de los procesos organizacionales mediante la notación BPMN.
-
-Gestión del proyecto: recibir orientación para organizar las historias de usuario y las actividades mediante GitHub Projects.
-
-Revisión conceptual: solicitar explicaciones y sugerencias para verificar la coherencia entre los procesos de negocio y las funcionalidades del sistema.
-
-Correcciones y validación humana
-
-Los resultados proporcionados por las herramientas de IA fueron utilizados como propuestas iniciales y no se incorporaron de manera automática.
-
-Se realizó una revisión humana de los contenidos para verificar que fueran coherentes con las características reales de La Boutique del Libro y con los objetivos del proyecto.
-
-Entre las tareas de revisión se contemplaron la adaptación de las respuestas al contexto de la organización, la corrección de posibles imprecisiones conceptuales y la validación de los procesos y funcionalidades propuestos.
-
-La responsabilidad final sobre las decisiones de diseño, la documentación y la coherencia del sistema corresponde a los integrantes del proyecto.
-
-En conclusión, la Inteligencia Artificial fue utilizada como una herramienta complementaria de asistencia, manteniendo el criterio propio y la responsabilidad humana sobre el trabajo realizado
+* **Revisión y Validación Humana:** Los resultados de la IA se emplearon estrictamente como borradores o propuestas iniciales. Todo el contenido conceptual, la adecuación al caso de estudio real de *La Boutique del Libro*, la validación de procesos y las decisiones de diseño fueron revisadas, corregidas y asumidas de manera crítica por el alumno. La responsabilidad intelectual sobre el proyecto recae íntegramente en su autor
