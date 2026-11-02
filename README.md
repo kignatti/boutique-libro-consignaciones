@@ -1,4 +1,4 @@
-# Módulo de Gestión de Consignaciones y Control de Inventario 🛠️
+# Módulo de Gestión de Consignaciones y Control de Inventario 
 ### La Boutique del Libro — Sucursal Trelew
 
 ---
