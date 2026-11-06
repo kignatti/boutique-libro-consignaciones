@@ -60,4 +60,14 @@ Para evaluar el éxito operacional del sistema, se definieron los siguientes ind
 ## 🤖 Declaración de Uso de Inteligencia Artificial (IA)
 Durante el desarrollo del proyecto se utilizaron herramientas de Inteligencia Artificial Generativa (principalmente ChatGPT) como recurso de apoyo para la estructuración de la documentación, la redacción formal, la organización de historias de usuario y la maquetación visual de diagramas.
 
-* **Revisión y Validación Humana:** Los resultados de la IA se emplearon estrictamente como borradores o propuestas iniciales. Todo el contenido conceptual, la adecuación al caso de estudio real de *La Boutique del Libro*, la validación de procesos y las decisiones de diseño fueron revisadas, corregidas y asumidas de manera crítica por el alumno. La responsabilidad intelectual sobre el proyecto recae íntegramente en su autor
+* **Revisión y Validación Humana:** Los resultados de la IA se emplearon estrictamente como borradores o propuestas iniciales. Todo el contenido conceptual, la adecuación al caso de estudio real de *La Boutique del Libro*, la validación de procesos y las decisiones de diseño fueron revisadas, corregidas y asumidas de manera crítica por el alumno. La responsabilidad intelectual sobre el proyecto recae íntegramente en su autor.
+
+### 📋 Registro de Prompts y Correcciones Realizadas
+
+Para garantizar la transparencia en el uso de herramientas de asistencia, se detallan a continuación los ejes de consulta realizados y las correcciones críticas aplicadas sobre los resultados obtenidos:
+
+| Área de Trabajo | Prompts Utilizados (Ejemplos) | Correcciones y Ajustes Realizados por el Alumno |
+| :--- | :--- | :--- |
+| **Modelado de Procesos (TGS y BPMN)** | *"Ayúdame a estructurar la redacción para describir a La Boutique del Libro como un sistema abierto enfocándome en la sucursal Trelew."* | **Ajuste de contexto real:** La IA generalizó el comportamiento de una librería estándar. Se corrigió manualmente para reflejar la dinámica específica de la sucursal Trelew (curaduría local, eventos culturales propios y gestión de autores de la región patagónica). |
+| **Diseño de Base de Datos y Entidades** | *"Propón 5 entidades relacionales clave para gestionar consignaciones y control de inventario en una librería en Python."* | **Refinamiento de atributos y reglas de negocio:** La propuesta inicial omitía detalles sobre los porcentajes de comisión variables según el acuerdo con editoriales independientes. Se reestructuraron las entidades `Proveedor` y `Liquidación` para asegurar el cálculo exacto de retribuciones. |
+| **Redacción Formal e Indicadores** | *"Mejora la redacción técnica de estos indicadores de desempeño para un trabajo práctico de Organización Empresarial."* | **Alineación académica:** Los borradores de la IA utilizaban un tono corporativo genérico. Se adaptó la terminología al marco teórico de la asignatura (Organización Empresarial de la UTN) y se vincularon directamente con las metas del proyecto a 6 meses. |
